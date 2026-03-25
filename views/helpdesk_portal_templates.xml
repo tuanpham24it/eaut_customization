@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Thêm cột mã sinh viên vào list view -->
+        <template id="portal_helpdesk_ticket_add_student_code"
+                  inherit_id="helpdesk.portal_helpdesk_ticket"
+                  name="Portal Helpdesk - Add Student Code Column">
+
+            <xpath expr="//thead/tr/th[1]" position="after">
+                <th>Mã sinh viên</th>
+            </xpath>
+
+            <xpath expr="//td[@class='text-start']" position="after">
+                <td>
+                    <span t-out="ticket.x_studio_char_field_u6_1iull632p or ''"/>
+                </td>
+            </xpath>
+
+        </template>
+
+         <!-- Thêm Mã sinh viên vào trang chi tiết ticket -->
+        <template id="tickets_followup_add_student_code"
+                  inherit_id="helpdesk.tickets_followup"
+                  name="Helpdesk Ticket Followup - Add Student Code">
+
+            <xpath expr="//div[@id='card_body']/div[@class='row mb-4']" position="after">
+                <div class="row mb-4">
+                    <strong class="col-lg-3">Mã sinh viên</strong>
+                    <span class="col-lg-9" t-out="ticket.x_studio_char_field_u6_1iull632p or ''"/>
+                </div>
+            </xpath>
+
+        </template>
+
+    </data>
+</odoo>
