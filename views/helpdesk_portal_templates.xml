@@ -3,7 +3,7 @@
     <data>
 
         <!-- Thêm cột mã sinh viên vào list view -->
-        <template id="portal_helpdesk_ticket_add_student_code"
+        <!-- <template id="portal_helpdesk_ticket_add_student_code"
                   inherit_id="helpdesk.portal_helpdesk_ticket"
                   name="Portal Helpdesk - Add Student Code Column">
 
@@ -17,7 +17,7 @@
                 </td>
             </xpath>
 
-        </template>
+        </template> -->
 
          <!-- Thêm Mã sinh viên vào trang chi tiết ticket -->
         <template id="tickets_followup_add_student_code"
